@@ -5,16 +5,16 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using API;
 using System.Threading.Tasks;
-
+using API.Data;
 
 [Route("api/[controller]")]
 [ApiController]
 public class FolhaPagamentoController : ControllerBase
 {
-    private readonly ApplicationContext _context;
+    private readonly AppDataContext _context;
     private readonly CalculadoraSalario _calculadoraSalario;
 
-    public FolhaPagamentoController(ApplicationContext context)
+    public FolhaPagamentoController(AppDataContext context)
     {
         _context = context;
         _calculadoraSalario = new CalculadoraSalario(); // Crie uma instância da CalculadoraSalario

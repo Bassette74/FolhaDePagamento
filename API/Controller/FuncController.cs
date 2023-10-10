@@ -1,4 +1,4 @@
-﻿namespace API;
+﻿namespace API.Data;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 [ApiController]
 public class FuncionarioController : ControllerBase
 {
-    private readonly ApplicationContext _context;
+    private readonly AppDataContext _context;
 
-    public FuncionarioController(ApplicationContext context)
+    public FuncionarioController(AppDataContext context)
     {
         _context = context;
     }

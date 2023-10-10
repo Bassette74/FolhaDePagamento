@@ -1,16 +1,17 @@
 ﻿using API.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace API;
+namespace API.Data;
 
-public class ApplicationContext : DbContext
+public class AppDataContext : DbContext
 {
-    public DbSet<Funcionario> Funcionarios { get; set; }
-    public DbSet<FolhaPagamento> FolhasPagamento { get; set; }
-
-    public ApplicationContext(DbContextOptions<ApplicationContext> options)
+    public AppDataContext(DbContextOptions<AppDataContext> options)
         : base(options)
     {
     }
+    public DbSet<Funcionario> Funcionarios { get; set; }
+    public DbSet<FolhaPagamento> FolhasPagamento { get; set; }
+
+    
 }
 
